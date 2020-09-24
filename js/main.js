@@ -57,11 +57,14 @@ function init(size) {
     gCounterMine=gLevel.MINES
     elCounterMine.innerText='Mines left : '+gCounterMine
     
+    var elRestarter=document.querySelector('.restart')
+    elRestarter.innerText = RESTART
 }
 
 function restart(elRestarter) {
     if (gGame.isOn) {
         killGame(gBoard);
+        elRestarter.innerText = LOSE;
     }
     else {
         init();
