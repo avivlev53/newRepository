@@ -8,9 +8,19 @@
     <title>Mine Sweeper-Aviv Levy</title>
 </head>
 
-<body>
+<body onload="init(easy)">
     <h1>Mine Sweeper</h1>
     <h3>By Aviv Levy</h3>
+    <div>
+        <button class="restart" onclick="restart(this)">😊</button>
+    </div>
+    <div class='buttons'>
+        <button class='button' id='btn1' onclick="init(easy)">Beginner</button>
+        <button class='button' id='btn2' onclick="init(medium)">Medium</button>
+        <button class='button' id='btn3' onclick="init(hard)">Expert</button>
+    </div>
+    <div class='timer'>Time: 00:00</div>
+    <div class='countMinesLeft'></div>
     <table class="board"></table>
     <div class="msg"></div>
 

@@ -10,6 +10,16 @@ table {
     margin:  0 auto;
 
 }
+h1 {
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h3 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 td { 
     width: 50px;
@@ -19,4 +29,53 @@ td {
 }
 td:hover {
     cursor: pointer; 
+    background-color: rgb(252, 122, 204);
+}
+button {
+    margin: 15px;
+    font-size: 20px;
+}
+button:hover {
+    cursor: pointer;
+}
+.timer{
+    width: 120px;
+    margin: 0 auto;
+    background-color:rgb(255, 92, 160);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border:2px solid mediumvioletred;
+}
+.countMinesLeft {
+    width: 120px;
+    margin: 0 auto;
+    background-color: rgb(255, 92, 160);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border:2px solid mediumvioletred;
+}
+
+.msg {
+    height: 40px;
+    font-size: large;
+}
+.restart{
+    border-radius: 20px;
+    border-radius: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.restart:hover{
+    background-color: rgb(192, 188, 188);
+}
+#btn1:hover {
+    background-color: rgb(253, 197, 236);
+}
+#btn2:hover {
+    background-color: rgb(247, 118, 208);
+}
+#btn3:hover {
+    background-color: rgb(255, 59, 196);
 }
