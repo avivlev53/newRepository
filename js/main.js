@@ -194,6 +194,8 @@ function renderCell(pos, value) {
     var elTd = document.querySelector('[data-pos="' + posStr + '"]');
     elTd.innerText = value;
     elTd.style.backgroundColor = 'rgb(255, 207, 255)'
+    elTd.style.color = colorfulNums(value)
+    elTd.style.fontSize ='20px' 
 }
 
 function cellClicked(elTd) { //בלחיצת מקש שמאלי
@@ -209,7 +211,7 @@ function cellClicked(elTd) { //בלחיצת מקש שמאלי
             setRandomMines(gLevel.MINES)
             setMinesNegsCount(gBoard)
         } else return;
-        
+
         if (cell.isMine) return;  //לא נותן בלחיצה ראשונה ללחוץ עליו רק מלחיצה שנייה אפשר..
     }
 
@@ -234,16 +236,53 @@ function cellClicked(elTd) { //בלחיצת מקש שמאלי
         cell.isShown = true
         elTd.innerText = cellType
         elTd.style.backgroundColor = 'rgb(255, 207, 255)'
+        elTd.style.color = colorfulNums(cellType)
+        elTd.style.fontSize ='20px' 
 
     }
     //DOM
     checkGameOver()
+}
+function colorfulNums(num) {
+    var color = ''
+    switch (num) {
+        case 1:
+            color = '#ff4353'
+            break;
+        case 2:
+            color = '#aa2efd'
+            break;
+        case 3:
+            color = '#a82106'
+            break;
+        case 4:
+            color = '#810c6a'
+            break;
+        case 5:
+            color = '#F00699'
+            break;
+        case 6:
+            color = '#8a5fff'
+            break;
+        case 7:
+            color = '#f30a54'
+            break;
+        case 8:
+            color = '#a70035'
+            break;
+        case EMPTYCELL:
+            break;
+        case MINE:
+            break
+    }
+    return color;
 }
 
 
 function cellMarked(elCell) { //סימון תא בדגל
 
     if (gGame.isOn === false) {
+        if (gGame.shownCount !== 0) return
         gGame.isOn = true
         stopWatch();
     }
@@ -269,6 +308,7 @@ function cellMarked(elCell) { //סימון תא בדגל
     checkGameOver() //אחרי כל סימון כזה בודקת אם יש ניצחון במשחק
 
 }
+
 
 function getPosFromElTd(elTd) {
     var dataSet = elTd.dataset;

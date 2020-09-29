@@ -1,82 +1,109 @@
+* {
+    font-family: cursive;
+}
+
 body {
     text-align: center;
     background-image: url("../img/0.PNG");
-    
+    background-size: cover;
 }
 
 table {
     border: 2px solid plum;
     background-color: purple;
-    margin:  0 auto;
-
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px rgb(151, 151, 151);
 }
+
 h1 {
     font-size: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 h3 {
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
-td { 
-    width: 25px;
-    height: 25px;
+h3,h1 {
+    text-shadow: 4px 4px 5px rgb(151, 151, 151);
+}
+td {
+    width: 30px;
+    height: 30px;
     text-align: center;
-    background-color:rgb(255, 89, 186) ;
+    background-color: rgb(255, 89, 186);
 }
+
 td:hover {
-    cursor: pointer; 
-    background-color: rgb(252, 122, 204);
+    cursor: pointer;
+    background-color: rgb(255, 147, 215);
 }
+
 button {
     margin: 15px;
+    outline: none;
     font-size: 20px;
+    border-radius: 8px;
 }
+
+.button {
+    transform: translateX(-10px);
+}
+
 button:hover {
     cursor: pointer;
 }
-.timer{
-    width: 120px;
-    margin: 0 auto;
-    background-color:rgb(255, 92, 160);
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    border:2px solid mediumvioletred;
-}
-.countMinesLeft {
+
+.timer {
     width: 120px;
     margin: 0 auto;
     background-color: rgb(255, 92, 160);
     border-radius: 5px;
     margin-bottom: 15px;
     font-size: 20px;
-    border:2px solid mediumvioletred;
+    border: 2px solid mediumvioletred;
+   
 }
 
+.countMinesLeft {
+    width: 150px;
+    margin: 0 auto;
+    background-color: rgb(255, 92, 160);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border: 2px solid mediumvioletred;
+    
+}
+.timer,.countMinesLeft,button {
+    box-shadow: 4px 4px 5px rgb(151, 151, 151);
+}
 .msg {
     height: 40px;
     font-size: large;
 }
-.restart{
-    border-radius: 20px;
+
+.restart {
     border-radius: 25%;
     margin-top: 10px;
     margin-bottom: 10px;
     outline: none;
 }
-.restart:hover{
+
+.restart:hover {
     background-color: rgb(192, 188, 188);
 }
+
 #btn1:hover {
     background-color: rgb(253, 197, 236);
 }
+
 #btn2:hover {
     background-color: rgb(247, 118, 208);
 }
+
 #btn3:hover {
     background-color: rgb(255, 59, 196);
 }
